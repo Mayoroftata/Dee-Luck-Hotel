@@ -1,0 +1,11 @@
+/* [project]/src/components/HeroSection.css [app-client] (css) */
+#sectionHero {
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("/img/hotelimage2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=src_components_HeroSection_c3284739.css.map*/

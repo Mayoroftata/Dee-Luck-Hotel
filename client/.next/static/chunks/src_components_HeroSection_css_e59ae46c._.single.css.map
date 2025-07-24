@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/HeroSection.css"],"sourcesContent":["#sectionHero {\r\n    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(\"/img/hotelimage2.jpg\");\r\n    background-size: cover;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    height: 100vh;\r\n    width: 100%;\r\n}\r\n"],"names":[],"mappings":"AAAA"}}]
+}

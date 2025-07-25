@@ -1,1 +1,125 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin/addRoom",
+      "regex": "^/admin/addRoom(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/addRoom(?:/)?$"
+    },
+    {
+      "page": "/booking",
+      "regex": "^/booking(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/booking(?:/)?$"
+    },
+    {
+      "page": "/booking/schema",
+      "regex": "^/booking/schema(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/booking/schema(?:/)?$"
+    },
+    {
+      "page": "/booking-success",
+      "regex": "^/booking\\-success(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/booking\\-success(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/login/schema",
+      "regex": "^/login/schema(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login/schema(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/register/schema",
+      "regex": "^/register/schema(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register/schema(?:/)?$"
+    },
+    {
+      "page": "/rooms/standard",
+      "regex": "^/rooms/standard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rooms/standard(?:/)?$"
+    },
+    {
+      "page": "/rooms/standard/room1",
+      "regex": "^/rooms/standard/room1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rooms/standard/room1(?:/)?$"
+    },
+    {
+      "page": "/rooms/standard/room2",
+      "regex": "^/rooms/standard/room2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rooms/standard/room2(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

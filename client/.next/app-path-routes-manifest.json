@@ -1,0 +1,16 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/booking-success/page": "/booking-success",
+  "/admin/addRoom/page": "/admin/addRoom",
+  "/booking/page": "/booking",
+  "/login/page": "/login",
+  "/register/page": "/register",
+  "/page": "/",
+  "/rooms/standard/room1/page": "/rooms/standard/room1",
+  "/rooms/standard/room2/page": "/rooms/standard/room2",
+  "/rooms/standard/page": "/rooms/standard",
+  "/login/schema/page": "/login/schema",
+  "/booking/schema/page": "/booking/schema",
+  "/register/schema/page": "/register/schema"
+}

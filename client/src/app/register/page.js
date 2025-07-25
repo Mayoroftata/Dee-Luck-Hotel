@@ -4,11 +4,13 @@ import { ToastContainer, toast } from "react-toastify";
 import { useFormik } from "formik";
 import Link from "next/link";
 import Image from "next/image";
-import { basicSchema } from "./schema/page";
+import { registerSchema } from "@/components/schema/AuthSchema";
 import { useRouter } from "next/navigation";
 import PulseLoader from "react-spinners/PulseLoader";
 // import { signIn } from "next-auth/react";
 import axios from "axios";
+
+export const dynamic = "force-dynamic"; // Disable prerendering
 
 const Page = () => {
   const router = useRouter();
@@ -65,7 +67,7 @@ const Page = () => {
         password: "",
         confirmPassword: "",
       },
-      validationSchema: basicSchema,
+      validationSchema: registerSchema,
       onSubmit,
     });
     console.log("Form values:", values);

@@ -1,18 +1,20 @@
 "use client";
 import React, { useEffect } from "react";
 import { useFormik } from "formik";
-import { bookingSchema } from "./schema/page";
+import { bookingSchema } from "@/components/schema/AllSchema";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMutation, gql } from "@apollo/client";
 import { showToast } from "@/lib/Toast"; // assuming you have a toast utility
 import { useAuth } from "@/context/AuthContext"; // assuming you have auth context
+
+export const dynamic = "force-dynamic"; // Disable prerendering
 
 const CREATE_BOOKING = gql`
   mutation CreateBooking($input: CreateBookingInput!) {
     createBooking(input: $input) {
       _id
       guestFirstName
-        guestLastName
+      guestLastName
       guestEmail
     }
   }
@@ -24,15 +26,13 @@ const Page = () => {
   const roomId = searchParams.get("roomId");
   const { user, isAuthenticated } = useAuth(); // pull from auth context
 
-  const [createBooking, { loading }] = useMutation(CREATE_BOOKING);
+  console.log("user", user);
 
-    console.log("user", user);
-    
   useEffect(() => {
-    if (!loading && !isAuthenticated) {
+    if (!isAuthenticated) {
       router.push("/login");
     }
-  }, [isAuthenticated, loading, router]);
+  }, [isAuthenticated, router]);
 
   const onSubmit = async (values, formikHelpers) => {
     try {
@@ -55,22 +55,24 @@ const Page = () => {
       router.push({
         pathname: "/booking-success",
         query: {
-            fullname: values.fullname,
-            email: values.email,
-            arrival: values.arrival,
-            departure: values.departure,
+          fullname: `${values.firstName} ${values.lastName}`, // Fixed fullname
+          email: values.email,
+          arrival: values.arrival,
+          departure: values.departure,
         },
-    });
+      });
     } catch (error) {
       console.error(error);
       showToast("Booking failed. Try again.", "error");
     }
   };
 
+  const [createBooking, { loading }] = useMutation(CREATE_BOOKING);
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
-        lastName: "",
+      lastName: "",
       email: "",
       phone: "",
       arrival: "",
@@ -88,16 +90,16 @@ const Page = () => {
   }
 
   return (
-    <div className="justify-center flex items-center  min-h-screen bg-blue-900">
-      <div className="bg-white  w-full max-w-lg mx-6 border border-white/20 shadow rounded">
+    <div className="justify-center flex items-center min-h-screen bg-blue-900">
+      <div className="bg-white w-full max-w-lg mx-6 border border-white/20 shadow rounded">
         <h1 className="text-center text-2xl font-bold text-blue-900 my-3">
           Hotel Booking
         </h1>
         <div className="px-5 pb-5 space-y-2">
           <form onSubmit={handleSubmit} className="space-y-2">
-            {/* Full Name */}
+            {/* First Name */}
             <InputField
-              label="firstName*"
+              label="First Name*"
               name="firstName"
               value={values.firstName}
               error={errors.firstName}

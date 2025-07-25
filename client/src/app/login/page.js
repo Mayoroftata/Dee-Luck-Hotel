@@ -4,10 +4,12 @@ import { ToastContainer, toast } from "react-toastify";
 import { useFormik } from "formik";
 import Link from "next/link";
 import Image from "next/image";
-import { loginSchema } from "./schema/page";
+import { loginSchema } from "../../components/schema/AuthSchema.jsx";
 import { PulseLoader } from "react-spinners";
 // import { signIn } from "next-auth/react";
 import axios from "axios";
+
+export const dynamic = "force-dynamic"; // Disable prerendering
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(false);

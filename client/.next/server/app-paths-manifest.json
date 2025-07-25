@@ -1,16 +1,16 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/booking-success/page": "app/booking-success/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/admin/addRoom/page": "app/admin/addRoom/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/login/page": "app/login/page.js",
-  "/register/page": "app/register/page.js",
+  "/booking-success/page": "app/booking-success/page.js",
   "/page": "app/page.js",
-  "/rooms/standard/room1/page": "app/rooms/standard/room1/page.js",
-  "/rooms/standard/room2/page": "app/rooms/standard/room2/page.js",
   "/rooms/standard/page": "app/rooms/standard/page.js",
+  "/rooms/standard/room2/page": "app/rooms/standard/room2/page.js",
+  "/rooms/standard/room1/page": "app/rooms/standard/room1/page.js",
   "/login/schema/page": "app/login/schema/page.js",
   "/booking/schema/page": "app/booking/schema/page.js",
-  "/register/schema/page": "app/register/schema/page.js"
+  "/register/schema/page": "app/register/schema/page.js",
+  "/booking/page": "app/booking/page.js",
+  "/login/page": "app/login/page.js",
+  "/register/page": "app/register/page.js"
 }

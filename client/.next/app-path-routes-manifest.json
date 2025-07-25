@@ -1,16 +1,16 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/_not-found/page": "/_not-found",
-  "/booking-success/page": "/booking-success",
+  "/favicon.ico/route": "/favicon.ico",
   "/admin/addRoom/page": "/admin/addRoom",
-  "/booking/page": "/booking",
-  "/login/page": "/login",
-  "/register/page": "/register",
+  "/booking-success/page": "/booking-success",
   "/page": "/",
-  "/rooms/standard/room1/page": "/rooms/standard/room1",
-  "/rooms/standard/room2/page": "/rooms/standard/room2",
   "/rooms/standard/page": "/rooms/standard",
+  "/rooms/standard/room2/page": "/rooms/standard/room2",
+  "/rooms/standard/room1/page": "/rooms/standard/room1",
   "/login/schema/page": "/login/schema",
   "/booking/schema/page": "/booking/schema",
-  "/register/schema/page": "/register/schema"
+  "/register/schema/page": "/register/schema",
+  "/booking/page": "/booking",
+  "/login/page": "/login",
+  "/register/page": "/register"
 }
